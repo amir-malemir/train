@@ -6,14 +6,17 @@ n, m = map(int, input().split())
 puzzle_input = list(map(int, input().split()))
 puzzle_input.sort()
 output = 0
-
-puzzle_num = [0] * m
-
+counter_min = 0
 for i in range(m-n+1):
     dif = puzzle_input[i+n-1] - puzzle_input[i]
+    if counter_min == 0:
+        output = dif
+        counter_min += 1
     if dif <= output:
         output = dif
-    elif output == 0:
-        output = dif
-
+        
 print(output)
+
+
+# boy and girl in chatroom
+
