@@ -17,8 +17,8 @@ for dragon in dragon_lists:
     else:
         status = False
         break
-    
-if status == 1:
+
+if status == True:
     print('YES')
 else:
     print('NO')
