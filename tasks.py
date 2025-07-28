@@ -68,3 +68,12 @@ if status == True:
     print('YES')
 else:
     print('NO')
+
+
+# 208A - Dubstep task
+
+n = input()
+
+m = n.replace('WUB', ' ')
+
+print(m)
