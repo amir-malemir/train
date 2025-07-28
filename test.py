@@ -1,5 +1,7 @@
 n, s = map(int, input().split())
 dragon_lists = []
+status = 0
+
 for i in range(n):
     dragon_attack, dragon_bonus = map(int, input().split())
     dragon_lists.append((dragon_attack, dragon_bonus))
@@ -7,14 +9,14 @@ for i in range(n):
 for dragon in dragon_lists:
     attk = dragon[0]
     bonus = dragon[1]
-    print('*' * 10)
-    print(attk)
-    print(bonus)
-    print('-' * 10)
-
     if s > attk:
         s = s + bonus
-        print('yes')
+        status = 1
+        
     else:
-        print('lose')
-# 
+        status = 0
+
+if status == 1:
+    print('YES')
+else:
+    print('NO')
