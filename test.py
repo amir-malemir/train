@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+s, n = map(int, input().split())
 dragon_lists = []
 status = 0
 
@@ -9,7 +9,7 @@ for i in range(n):
 for dragon in dragon_lists:
     attk = dragon[0]
     bonus = dragon[1]
-    if s > attk:
+    if s >= attk:
         s = s + bonus
         status = 1
         
