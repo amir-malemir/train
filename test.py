@@ -1,5 +1,6 @@
 s, n = map(int, input().split())
 dragon_lists = []
+dragon_lists.sort()
 status = 0
 
 for i in range(n):
