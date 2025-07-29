@@ -3,7 +3,7 @@ fanos_l = list(map(int, input().split()))
 output = 0
 fanos_l.sort()
 
-for i in range(n):
+for i in range(n-1):
     num1 = fanos_l[i+1]
     num2 = fanos_l[i]
     calcu = num1 - num2 
