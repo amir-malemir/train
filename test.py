@@ -1,12 +1,16 @@
 n, l = map(int, input().split())
 fanos_l = list(map(int, input().split()))
-output = 0
+middle = 0
+
 fanos_l.sort()
 
-for i in range(n-1):
-    num1 = fanos_l[i+1]
-    num2 = fanos_l[i]
-    calcu = num1 - num2 
-    if calcu > output:
-        output = calcu
-print(output/2)  
+if n > 1:    
+    for i in range(n-1):
+        calcu = fanos_l[i+1] - fanos_l[i]
+        if calcu > middle:
+            middle = calcu
+middle = middle/ 2
+first_l = fanos_l[0] - 0
+last_l = fanos_l[n-1] - l
+output = max(first_l, last_l, middle)
+print(output)
