@@ -2,9 +2,13 @@ mehman = input()
 mizban = input()
 string_convert = input()
 
-for i in range(1 , len(mehman)):
-    check_mehman = mehman[i:]
-    check_mizban = mizban[i:]
-    if check_mehman and check_mizban in string_convert:
-        print('YES')
-print('NO')
+
+mix_input = mehman + mizban
+mix_input = "".join(sorted(mix_input))
+diff_string = "".join(sorted(string_convert))
+print(mix_input)
+print(diff_string)
+if mix_input == diff_string:
+    print('YES')
+else:
+    print('No')
