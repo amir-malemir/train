@@ -77,3 +77,5 @@ n = input()
 m = n.replace('WUB', ' ')
 
 print(m)
+
+# 
