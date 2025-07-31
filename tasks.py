@@ -96,3 +96,18 @@ first_l = fanos_l[0] - 0
 last_l = l - fanos_l[n-1]
 output = max(first_l, last_l, middle)
 print(output)
+
+# Amusing Joke
+
+mehman = input()
+mizban = input()
+string_convert = input()
+
+
+mix_input = mehman + mizban
+mix_input = "".join(sorted(mix_input))
+diff_string = "".join(sorted(string_convert))
+if mix_input == diff_string:
+    print('YES')
+else:
+    print('NO')
