@@ -111,3 +111,26 @@ if mix_input == diff_string:
     print('YES')
 else:
     print('NO')
+
+# Business trip 
+
+n = int(input())
+month = list(map(int , input().split()))
+counter = 0
+sum_number = 0
+flag = False
+month.sort(reverse=True)
+if n == 0:
+        flag = True
+        print('0')
+        
+for i in range(12):
+    counter += 1
+    sum_number = sum_number + month[i]
+    if sum_number >= n and n > 0:
+        flag = True
+        print(counter)
+        break
+if flag == False:
+    print('-1') 
+    
