@@ -1,14 +1,18 @@
 n = int(input())
 people = []
-input = 0
-output = 0
+in_people = 0
+out_people = 0
+max_num = 0
 
 for i in range(n):
-    inside, outside = map(int, input().split())
-    people.append((inside, outside))
+    outside, inside = map(int, input().split())
+    people.append((outside, inside))
 for peo in people:
-    input = peo[0]
-    output = peo[1]
-    calc = input + peo[0] - peo[1]
-print(people)
-print(calc)
+    in_people = peo[1]
+    out_people = peo[0]
+    calc = max_num - peo[0] + peo[1]
+    if calc > max_num:
+        max_num = calc
+
+
+print(max_num)
