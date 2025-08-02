@@ -10,7 +10,8 @@ for i in range(n):
 for peo in people:
     in_people = peo[1]
     out_people = peo[0]
-    calc = max_num - peo[0] + peo[1]
+    calc = max_num + peo[1] - peo[0] 
+    print(calc)
     if calc > max_num:
         max_num = calc
 
