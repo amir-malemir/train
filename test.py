@@ -2,7 +2,7 @@ import string
 all_alphabet = string.ascii_lowercase
 m = int(input())
 n = list(input().lower())
-if m >= 26:
+if len(set(n)) >= 26:
     n.sort()
     input_user = set(n)
     output_char = "".join(sorted(input_user)).lower()
