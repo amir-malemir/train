@@ -2,10 +2,12 @@ n = int(input())
 worm_gr = list(map(int, input().split()))
 m = int(input())
 which_worm = list(map(int, input().split()))
-
+prefix_sums = []
+current_sum = 0
 for i in worm_gr:
-    sum_list += i
-print(sum_list)
+    current_sum += i
+    prefix_sums.append(current_sum)
+print(prefix_sums)
 low = 0
 high = 0
 
