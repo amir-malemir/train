@@ -7,7 +7,6 @@ current_sum = 0
 for i in worm_gr:
     current_sum += i
     sums.append(current_sum)
-print(sums)
 for worm_num in which_worm:
     low = 0
     high = n - 1
