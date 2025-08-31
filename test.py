@@ -11,8 +11,10 @@ for i in range(n-1):
     print(' first for !!!!!!!!')
     for j in spend_time:
         time_for_read += j
+        print(f'time for read--> {time_for_read}')
         if time_for_read <= t:
             sum_books += 1
+            print(f'time for read--> {sum_books}')
         else:
             break
 
