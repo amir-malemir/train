@@ -7,7 +7,7 @@ for i in range(m):
     list_of_numbers = []
     
     for j in range(index_number,n):
-        list_of_numbers.append(index_number[j])
+        list_of_numbers.append(numbers[j])
 
     output_numbers = set(list_of_numbers)   
     print(len(output_numbers))
