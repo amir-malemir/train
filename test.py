@@ -9,4 +9,5 @@ for i in range(m):
         list_of_numbers.append(j)
 
     output_numbers = set(list_of_numbers)   
-        
+    print(len(output_numbers))
+   
