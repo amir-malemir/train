@@ -225,17 +225,40 @@ print(read_book)
 # Books 279/B - بهینه و مفید
 
 n, t = map(int, input().split())
-spend_time = list(map(int, input().split()))
-read_book = 0
-next_number = 0
-time_for_read= 0
+time_for_read_books = list(map(int, input().split()))
+books_read = 0
+start_index = 0
+time_spent = 0
+
 for i in range(n):
-    time_for_read += spend_time[i]
+    time_spent += time_for_read_books[i]
+
+    while time_spent > t:
+        time_spent -= time_for_read_books[start_index]
+        start_index += 1
+    result = i - start_index + 1
+    if result > books_read:
+        books_read = result
+print(books_read)
 
 
-    while time_for_read > t:
-        time_for_read -= spend_time[next_number]
-        next_number += 1
 
-    read_book = max(read_book, i - next_number + 1)
-print(read_book)
+
+
+
+
+
+
+# n, m = map(int, input().split())
+# numbers = list(map(int, input().split()))
+# counter = 0 
+# for i in range(m):
+#     l = int(input())
+#     index_number = l - 1
+#     list_of_numbers = []
+    
+#     for j in range(index_number,n):
+#         list_of_numbers.append(numbers[j])
+
+# output_numbers = set(list_of_numbers)   
+# print(len(output_numbers))
