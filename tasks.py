@@ -232,9 +232,9 @@ time_spent = 0
 
 for i in range(n):
     time_spent += time_for_read_books[i]
-
-    while time_spent > t:
+    if time_spent > t:
         time_spent -= time_for_read_books[start_index]
+
         start_index += 1
     result = i - start_index + 1
     if result > books_read:
@@ -244,21 +244,3 @@ print(books_read)
 
 
 
-
-
-
-
-
-# n, m = map(int, input().split())
-# numbers = list(map(int, input().split()))
-# counter = 0 
-# for i in range(m):
-#     l = int(input())
-#     index_number = l - 1
-#     list_of_numbers = []
-    
-#     for j in range(index_number,n):
-#         list_of_numbers.append(numbers[j])
-
-# output_numbers = set(list_of_numbers)   
-# print(len(output_numbers))
