@@ -8,6 +8,5 @@ for i in range(m):
     for j in range(index_number,n):
         list_of_numbers.append(j)
 
-print(list_of_numbers)
-# output_numbers = len(set(j))
+    output_numbers = set(list_of_numbers)   
         
