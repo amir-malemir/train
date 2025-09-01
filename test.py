@@ -1,10 +1,13 @@
 n, m = map(int, input().split())
 numbers = list(map(int, input().split()))
 counter = 0 
-
-for i in range(n):
+list_of_numbers = []
+for i in range(m):
     l = int(input())
-    counter += 1
-    for j in range(l,n):
-        print(numbers[j])
+    index_number = l - 1
+    for j in range(index_number,n):
+        list_of_numbers.append(j)
+
+print(list_of_numbers)
+# output_numbers = len(set(j))
         
