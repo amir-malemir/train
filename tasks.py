@@ -200,25 +200,42 @@ for worm_num in which_worm:
  
 
 
-# Books 279/B
+# Books 279/B - n**2 time complexity
+n, t = map(int, input().split())
+time_for_read = list(map(int, input().split()))
 
-#     sum_books = 0
-#     time_for_read = 0
-#     counter = 0
-#     print(' first for !!!!!!!!')
-#     for j in spend_time:
-#         # print(f'j--> {j}')
+read_book = 0
+sum_books = 0
+counter = 0
 
-#         time_for_read += j
-#         print(f'time for read--> {time_for_read}')
-#         if time_for_read <= t:
-#             sum_books += 1
-#             print(f'sumbook--> {sum_books}')
-#         else:
-#             time_for_read -= spend_time[0]
-#             left += 1
-#             break
+for i in range(n):
+    time_spend = 0
+    for j in range(i, n):
+        time_spend += time_for_read[j]
+        if time_spend > t:
+            break
+        sum_books = j - i + 1
+        if sum_books > read_book:
+            read_book = sum_books
 
-#     if sum_books > read_book:
-#         read_book = sum_books
-# print(f'last answer : {read_book}')
+
+print(read_book)
+
+
+# Books 279/B - بهینه و مفید
+
+n, t = map(int, input().split())
+spend_time = list(map(int, input().split()))
+read_book = 0
+next_number = 0
+time_for_read= 0
+for i in range(n):
+    time_for_read += spend_time[i]
+
+
+    while time_for_read > t:
+        time_for_read -= spend_time[next_number]
+        next_number += 1
+
+    read_book = max(read_book, i - next_number + 1)
+print(read_book)
