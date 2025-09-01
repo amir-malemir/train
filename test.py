@@ -8,13 +8,12 @@ for i in range(m):
     l = int(input())
     list_of_questions.append(l)
 
-for x in range(l):
-    index_number = x
+for x in range(m):
+    index_number = list_of_questions[x] - 1
     
     list_of_numbers = []
     
     for j in range(index_number,n):
         list_of_numbers.append(numbers[j])
-
     output_numbers = set(list_of_numbers)   
     print(len(output_numbers))
