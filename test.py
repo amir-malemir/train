@@ -17,18 +17,23 @@
 #     while read_ptr != 0:
 #         next_read_ptr = read_ptr + 1
 
-def get_number(age, weight):
-    age = ""
-    weight = ""
-    while not age.isdigit():
-        age = input('age? ')
-    age = int(age)
-    while not weight.isdigit():
-        weight = input('weight? ')
-
-    weight = int(weight)
+def get_number(msg: str):
+    number = ""
     
-    return age, weight
+    while not number.isdigit():
+        number = input(msg)
+    
+    return int(number)
 
-bmi = get_number(50, 180)
+def get_bmi(height ,weight):
+    return 10_000 * (weight / height / height ) 
+
+
+
+number1 = get_number(msg = 'height? ')
+number2 = get_number(msg = 'weight? ')
+print(number1, number2)
+
+bmi = get_bmi(number1, number2)
+bmi = "{:.2f}".format(bmi)
 print(bmi)
