@@ -17,4 +17,15 @@
 #     while read_ptr != 0:
 #         next_read_ptr = read_ptr + 1
 
+def get_number(age, weight):
+    age = ""
+    while not age.isdigit():
+        age = input('age? ')
     
+    while not age.isdigit():
+        age = input('age? ')
+    
+    return int(age)
+
+age = get_number(20)
+print(age)
