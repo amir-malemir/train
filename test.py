@@ -24,7 +24,8 @@ def get_number(age, weight):
         age = input('age? ')
     age = int(age)
     while not weight.isdigit():
-        weight = int(input('weight? '))
+        weight = input('weight? ')
+
     weight = int(weight)
     
     return age, weight
