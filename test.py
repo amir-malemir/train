@@ -19,13 +19,15 @@
 
 def get_number(age, weight):
     age = ""
+    weight = ""
     while not age.isdigit():
         age = input('age? ')
+    age = int(age)
+    while not weight.isdigit():
+        weight = int(input('weight? '))
+    weight = int(weight)
     
-    while not age.isdigit():
-        age = input('age? ')
-    
-    return int(age)
+    return age, weight
 
-age = get_number(20)
-print(age)
+bmi = get_number(50, 180)
+print(bmi)
