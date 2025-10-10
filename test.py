@@ -1,4 +1,4 @@
-import fun
+
 # C. Qpwoeirut And The City
 # n = int(input())
 # m = int(input())
@@ -7,4 +7,8 @@ import fun
 # while i < n:
 #     print(m)
 
-fun.is_car_available(2024, 'bmw')
+def search_stu(**kwargs):
+    print(kwargs)
+
+
+search_stu(name = 'amir', age = 25, stack = 'python')
