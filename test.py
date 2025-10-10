@@ -6,3 +6,7 @@
 # while i < n:
 #     print(m)
 
+def is_car_available(cars):
+    print(cars)
+
+is_car_available('bmw')
