@@ -1,3 +1,26 @@
+def is_car_available(year:int , *cars):
+    available_cars = {
+        2025: ['BMW', 'audi  '],
+        2024: ['mercedes', 'BMW', 'jeep  ']
+    }
+    models = available_cars.get(year)
+    print(models)
+    models = [model.strip().lower() for model in models]
+    print(models)
+    
+    if not models:
+        print( 'sry, we dont have car for this year' )
+        return
+    for car in cars:
+        if car.strip().lower() in models:
+            print(f'{car.title()} is available')
+        else:
+            print(f'{car.title()} is not available')
+
+is_car_available(2024,'BMW', 'volvo  ')
+
+
+
 def get_number(msg: str, min_num: int = 0, max_num: int = 300) -> int:
     number = ""
     
@@ -24,18 +47,19 @@ def bmi_ranges(bmi: int):
         print('overweight')
     else:    
         print('obase range')
+        
+if __name__ == "__main__":
+    # این کد دیگر در زمان ایمپورت اجرا نمی‌شود
+    number1 = get_number(msg = 'height? ', min_num = 70, max_num = 200)
+    number2 = get_number(msg = 'weight? ')
+    print(number1, number2)
+
+    bmi = get_bmi(number1, number2)
+    bmi = "{:.2f}".format(bmi)
+    print(bmi)
+    bmi_ranges(float(bmi))
 
 
-
-
-number1 = get_number(msg = 'height? ', min_num = 70, max_num = 200)
-number2 = get_number(msg = 'weight? ')
-print(number1, number2)
-
-bmi = get_bmi(number1, number2)
-bmi = "{:.2f}".format(bmi)
-print(bmi)
-bmi_ranges(float(bmi))
 
 # L = 0 
 # read_ptr = L
@@ -70,23 +94,3 @@ bmi_ranges(float(bmi))
 # print('*' * 10)
 
 
-def is_car_available(year:int , *cars):
-    available_cars = {
-        2025: ['BMW', 'audi  '],
-        2024: ['mercedes', 'BMW', 'jeep  ']
-    }
-    models = available_cars.get(year)
-    print(models)
-    models = [model.strip().lower() for model in models]
-    print(models)
-    
-    if not models:
-        print( 'sry, we dont have car for this year' )
-        return
-    for car in cars:
-        if car.strip().lower() in models:
-            print(f'{car.title()} is available')
-        else:
-            print(f'{car.title()} is not available')
-
-is_car_available(2024,'BMW', 'volvo  ')
