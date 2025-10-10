@@ -6,6 +6,7 @@
 # while i < n:
 #     print(m)
 
+<<<<<<< HEAD
 # L = 0 
 # read_ptr = L
 # write_ptr = 1
@@ -37,3 +38,22 @@ print(number1, number2)
 bmi = get_bmi(number1, number2)
 bmi = "{:.2f}".format(bmi)
 print(bmi)
+=======
+students = []
+while True:
+    name = input('name? ')
+    age = input('age? ')
+    while not age.isdigit():
+        age = input('age? ')
+    age = int(age)
+    students.append({'name': name, 'age': age})
+    resume = input('add? (n/y) ')
+    if resume.lower() == 'n':
+        break
+print('*' * 10)
+
+for stu in students:
+    print(stu['name'], stu['age'])
+
+print('*' * 10)
+>>>>>>> be46202 (calc bmi)
