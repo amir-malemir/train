@@ -19,8 +19,8 @@ def is_car_available(year:int , *cars):
     if not models:
         print( 'sry, we dont have car for this year' )
         return
-    for car.strip().lower() in cars:
-        if car in models:
+    for car in cars:
+        if car.strip().lower() in models:
             print(f'{car.title()} is available')
         else:
             print(f'{car.title()} is not available')
