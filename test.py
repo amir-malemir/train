@@ -6,7 +6,6 @@
 # while i < n:
 #     print(m)
 
-<<<<<<< HEAD
 # L = 0 
 # read_ptr = L
 # write_ptr = 1
@@ -18,42 +17,60 @@
 #     while read_ptr != 0:
 #         next_read_ptr = read_ptr + 1
 
-def get_number(msg: str):
+def get_number(msg: str, min_num: int = 0, max_num: int = 300) -> int:
     number = ""
     
-    while not number.isdigit():
+    while True:
+
         number = input(msg)
-    
+        if number.isdigit():
+            number = int(number)
+            if number >= min_num and number <= max_num:
+                break
     return int(number)
 
 def get_bmi(height ,weight):
     return 10_000 * (weight / height / height ) 
 
+def bmi_ranges(bmi: int):
+    bmi_number = bmi
+
+    if bmi_number <= 18.5:
+        print('underwight')
+    elif bmi_number <= 24.9:
+        print('healthy weight')
+    elif bmi_number <= 29.9:
+        print('overweight')
+    else:    
+        print('obase range')
 
 
-number1 = get_number(msg = 'height? ')
+
+
+number1 = get_number(msg = 'height? ', min_num = 70, max_num = 200)
 number2 = get_number(msg = 'weight? ')
 print(number1, number2)
 
 bmi = get_bmi(number1, number2)
 bmi = "{:.2f}".format(bmi)
 print(bmi)
-=======
-students = []
-while True:
-    name = input('name? ')
-    age = input('age? ')
-    while not age.isdigit():
-        age = input('age? ')
-    age = int(age)
-    students.append({'name': name, 'age': age})
-    resume = input('add? (n/y) ')
-    if resume.lower() == 'n':
-        break
-print('*' * 10)
+bmi_ranges(float(bmi))
 
-for stu in students:
-    print(stu['name'], stu['age'])
 
-print('*' * 10)
->>>>>>> be46202 (calc bmi)
+# students = []
+# while True:
+#     name = input('name? ')
+#     age = input('age? ')
+#     while not age.isdigit():
+#         age = input('age? ')
+#     age = int(age)
+#     students.append({'name': name, 'age': age})
+#     resume = input('add? (n/y) ')
+#     if resume.lower() == 'n':
+#         break
+# print('*' * 10)
+
+# for stu in students:
+#     print(stu['name'], stu['age'])
+
+# print('*' * 10)
